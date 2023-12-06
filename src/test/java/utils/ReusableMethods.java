@@ -10,14 +10,15 @@ import java.time.Duration;
 public class ReusableMethods {
 
     public static void tiklamaMethodu(int xKoordinati,int yKoordinati,int beklemeSuresi) throws InterruptedException {
-        TouchAction action = new TouchAction<>(Driver.getAndroidDriver());
-        action.press(PointOption.point(xKoordinati, yKoordinati))
+        TouchAction action=new TouchAction<>(Driver.getAndroidDriver());
+        action.press(PointOption.point(xKoordinati,yKoordinati))
                 .release()
                 .perform();
         Thread.sleep(beklemeSuresi);
     }
-    public static void screenScrollMethod(int pressXkoordinati, int pressYkoordinati,int wait,int moveXkoordinati,int moveYkoordinati,int bekleme) throws InterruptedException {
-        TouchAction action = new TouchAction<>(Driver.getAndroidDriver());
+
+    public static void screenScroolMethod(int pressXkoordinati,int pressYkoordinati,int wait,int moveXkoordinati,int moveYkoordinati,int bekleme) throws InterruptedException {
+        TouchAction action=new TouchAction<>(Driver.getAndroidDriver());
         action.press(PointOption.point(pressXkoordinati,pressYkoordinati))
                 .waitAction(WaitOptions.waitOptions(Duration.ofMillis(wait)))
                 .moveTo(PointOption.point(moveXkoordinati,moveYkoordinati))
@@ -30,5 +31,6 @@ public class ReusableMethods {
         AndroidDriver driver = (AndroidDriver)  Driver.getAndroidDriver();
         driver.findElementByAndroidUIAutomator("new UiScrollable(new UiSelector()).scrollIntoView(text(\"" + elementText + "\"))");
         driver.findElementByXPath("//*[@text='" + elementText + "']").click();
+
     }
 }
