@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber.json",},
         features ="src/test/resources/mobileFeature",
         glue = "stepdefinitions",
-        tags = "@ab",
+        tags = "@browser",
         dryRun =false
         // Eger ki dry run true ise : Features dosyalarinda yazmis oldugumuz eksik test steplerini belirlemek icin
         // verilen TAG namelerine ait olan seneryolarin eksik adimlarini belirler
