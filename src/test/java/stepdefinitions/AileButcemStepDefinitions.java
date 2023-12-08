@@ -14,6 +14,7 @@ public class AileButcemStepDefinitions {
     public void kullanici_driver_kurulumlarini_yaparak_cihaz_baglantisini_kurar() {
         Driver.getAndroidDriver();
     }
+
     @Given("ilk ekran ayarlarini yapin ve {string} ardindan login sayfasina ulasin")
     public void ilk_ekran_ayarlarini_yapin_ve_ardindan_login_sayfasina_ulasin(String girisButonu) throws InterruptedException {
         // 968, 1081, 139, 1081
